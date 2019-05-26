@@ -765,4 +765,11 @@ public class StringUtilsTests {
 		}
 	}
 
+	@Test
+	public void testApplyRelativePath() {
+		String path = "a/b/c.txt";
+		String rpath = "c.txt";
+		assertEquals(StringUtils.applyRelativePath(path, rpath), "a/b/c.txt");
+	}
+
 }
